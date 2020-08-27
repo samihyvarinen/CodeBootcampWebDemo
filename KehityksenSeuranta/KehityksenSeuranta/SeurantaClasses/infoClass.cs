@@ -25,7 +25,7 @@ namespace KehityksenSeuranta.SeurantaClasses
         public int Peliaika { get; set; }
         public string Kommentti { get; set; }
 
-        static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
+        static string myconnstrng = ConfigurationManager.ConnectionStrings["KehityksenSeuranta.Properties.Settings.cn"].ConnectionString;
 
         // Valitaan Data Databasesta
         public DataTable Select()
@@ -36,7 +36,7 @@ namespace KehityksenSeuranta.SeurantaClasses
         try
         {
             //2. SQL Query
-            string sql = "SELECT * FROM tbl_Info";
+            string sql = "SELECT * FROM Info";
         SqlCommand cmd = new SqlCommand(sql, conn);
         // SQL DataAdapter using cmd
         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -63,7 +63,7 @@ namespace KehityksenSeuranta.SeurantaClasses
                 //SQL datan päivittämiseen
                 //Tapa jolla päivitetään tiedot databaseen sovelluksesta
                 //string sql = "UPDATE tbl_Info SET Tapot=@Tapot, Kuolemat=@Kuolemat, Damage=@Damage, Ase=@Ase, Viikko=@Viikko, Peliaika=@Peliaika, Kommentti=@Kommentti WHERE PelaajaID=@PelaajaID";
-                string sql = "INSERT INTO tbl_Info (PelaajaID, Tapot, Kuolemat, Damage, Ase, Viikko, Peliaika, Kommentti) VALUES (@PelaajaID, @Tapot, @Kuolemat, @Damage, @Ase, @Viikko, @Peliaika, @Kommentti)";
+                string sql = "INSERT INTO Info (PelaajaID, Tapot, Kuolemat, Damage, Ase, Viikko, Peliaika, Kommentti) VALUES (@PelaajaID, @Tapot, @Kuolemat, @Damage, @Ase, @Viikko, @Peliaika, @Kommentti)";
 
                 //SQL komennon luonti
                 SqlCommand cmd = new SqlCommand(sql, conn);
@@ -108,7 +108,7 @@ namespace KehityksenSeuranta.SeurantaClasses
             SqlConnection conn = new SqlConnection(myconnstrng);
             try
             {
-                string sql = "UPDATE tbl_Info SET PelaajaID=@PelaajaID, Tapot=@Tapot, Kuolemat=@Kuolemat, Damage=@Damage, Ase=@Ase, Viikko=@Viikko, Peliaika=@Peliaika, Kommentti=@Kommentti WHERE Data=@Data";
+                string sql = "UPDATE Info SET PelaajaID=@PelaajaID, Tapot=@Tapot, Kuolemat=@Kuolemat, Damage=@Damage, Ase=@Ase, Viikko=@Viikko, Peliaika=@Peliaika, Kommentti=@Kommentti WHERE Data=@Data";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@Data", c.Data);
                 cmd.Parameters.AddWithValue("@PelaajaID", c.PelaajaID);
@@ -152,7 +152,7 @@ namespace KehityksenSeuranta.SeurantaClasses
             try
             {
                 //SQL Query datan poistoon
-                string sql = "DELETE FROM tbl_Info WHERE Data=@Data";
+                string sql = "DELETE FROM Info WHERE Data=@Data";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@Data", c.Data);

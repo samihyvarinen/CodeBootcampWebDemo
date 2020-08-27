@@ -43,7 +43,7 @@ namespace KehityksenSeuranta
             {
                 //Onnistunut lisäys
                 MessageBox.Show("Uudet tiedot lisätty");
-                //kutsutaan clear method tänne
+                // tyhjennetään input kentät lisäyksen jälkeen
                 Clear();
             }
             else
@@ -147,13 +147,13 @@ namespace KehityksenSeuranta
 
             }
         }
-        static string myconnstr = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
+        static string myconnstr = ConfigurationManager.ConnectionStrings["KehityksenSeuranta.Properties.Settings.cn"].ConnectionString;
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             //Hakukentän arvojen nouto
             string keyword = textBoxSearchPelaaja.Text;
             SqlConnection conn = new SqlConnection(myconnstr);
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM tbl_Info WHERE PelaajaID LIKE '%"+keyword+"%' OR Ase LIKE '%"+keyword+"%' OR Viikko LIKE '%"+keyword+"%'",conn);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Info WHERE PelaajaID LIKE '%"+keyword+"%' OR Ase LIKE '%"+keyword+"%' OR Viikko LIKE '%"+keyword+"%'",conn);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             dgvLista.DataSource = dt;

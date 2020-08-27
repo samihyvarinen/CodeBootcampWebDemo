@@ -8,3 +8,5 @@ C:\bootcamp\CodeBootcampWebDemo\KehityksenSeuranta\KehityksenSeuranta\obj\Debug\
 C:\bootcamp\CodeBootcampWebDemo\KehityksenSeuranta\KehityksenSeuranta\obj\Debug\KehityksenSeuranta.csproj.CoreCompileInputs.cache
 C:\bootcamp\CodeBootcampWebDemo\KehityksenSeuranta\KehityksenSeuranta\obj\Debug\KehityksenSeuranta.exe
 C:\bootcamp\CodeBootcampWebDemo\KehityksenSeuranta\KehityksenSeuranta\obj\Debug\KehityksenSeuranta.pdb
+C:\bootcamp\CodeBootcampWebDemo\KehityksenSeuranta\KehityksenSeuranta\bin\Debug\Database.mdf
+C:\bootcamp\CodeBootcampWebDemo\KehityksenSeuranta\KehityksenSeuranta\bin\Debug\Database_log.ldf
