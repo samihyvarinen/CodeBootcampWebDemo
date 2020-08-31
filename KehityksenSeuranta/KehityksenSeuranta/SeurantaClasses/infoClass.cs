@@ -22,7 +22,7 @@ namespace KehityksenSeuranta.SeurantaClasses
         public int Damage { get; set; }
         public string Ase { get; set; }
         public int Viikko { get; set; }
-        public int Peliaika { get; set; }
+        public string Peliaika { get; set; }
         public string Kommentti { get; set; }
 
         static string myconnstrng = ConfigurationManager.ConnectionStrings["KehityksenSeuranta.Properties.Settings.cn"].ConnectionString;
@@ -62,7 +62,6 @@ namespace KehityksenSeuranta.SeurantaClasses
             {
                 //SQL datan päivittämiseen
                 //Tapa jolla päivitetään tiedot databaseen sovelluksesta
-                //string sql = "UPDATE tbl_Info SET Tapot=@Tapot, Kuolemat=@Kuolemat, Damage=@Damage, Ase=@Ase, Viikko=@Viikko, Peliaika=@Peliaika, Kommentti=@Kommentti WHERE PelaajaID=@PelaajaID";
                 string sql = "INSERT INTO Info (PelaajaID, Tapot, Kuolemat, Damage, Ase, Viikko, Peliaika, Kommentti) VALUES (@PelaajaID, @Tapot, @Kuolemat, @Damage, @Ase, @Viikko, @Peliaika, @Kommentti)";
 
                 //SQL komennon luonti

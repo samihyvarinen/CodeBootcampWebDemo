@@ -34,7 +34,7 @@ namespace KehityksenSeuranta
             c.Damage = int.Parse(textBoxDamage.Text);
             c.Ase = textBoxAse.Text;
             c.Viikko = int.Parse(textBoxViikko.Text);
-            c.Peliaika = int.Parse(textBoxPeliaika.Text);
+            c.Peliaika = textBoxPeliaika.Text;
             c.Kommentti = textBoxKommentti.Text;
 
             //Lisätään infoa databaseen
@@ -91,7 +91,7 @@ namespace KehityksenSeuranta
             c.Damage = int.Parse(textBoxDamage.Text);
             c.Ase = textBoxAse.Text;
             c.Viikko = int.Parse(textBoxViikko.Text);
-            c.Peliaika = int.Parse(textBoxPeliaika.Text);
+            c.Peliaika = textBoxPeliaika.Text;
             c.Kommentti = textBoxKommentti.Text;
             //päivitetään data databaseen
             bool success = c.Update(c);
