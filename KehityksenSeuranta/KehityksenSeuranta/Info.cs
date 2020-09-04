@@ -67,7 +67,6 @@ namespace KehityksenSeuranta
         private void dgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1) return;
-            this.Close();
         }
         public void Clear()
         {            

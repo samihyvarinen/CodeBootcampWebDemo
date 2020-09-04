@@ -5,7 +5,7 @@
 /AspNetCoreBackend/.vs/AspNetCoreBackend
 /AspNetCoreBackend/AspNetCoreBackend/bin/Debug/netcoreapp3.1
 /AspNetCoreBackend/AspNetCoreBackend/obj
-/KehityksenSeuranta/.vs/KehityksenSeuranta/v16
+/KehityksenSeuranta/.vs
 /KehityksenSeuranta/KehityksenSeurantaSovellus
-/KehityksenSeuranta/KehityksenSeuranta/bin/debug
-/KehityksenSeuranta/KehityksenSeuranta/obj/debug
+/KehityksenSeuranta/KehityksenSeuranta/bin
+/KehityksenSeuranta/KehityksenSeuranta/obj
