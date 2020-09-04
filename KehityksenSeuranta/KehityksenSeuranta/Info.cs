@@ -44,7 +44,7 @@ namespace KehityksenSeuranta
                 //Onnistunut lisäys
                 MessageBox.Show("Uudet tiedot lisätty");
                 // tyhjennetään input kentät lisäyksen jälkeen
-                Clear();
+                ClearPelaaja();
             }
             else
             {
@@ -76,6 +76,16 @@ namespace KehityksenSeuranta
             textBoxDamage.Text = "";
             textBoxAse.Text = "";
             textBoxViikko.Text = "";
+            textBoxPeliaika.Text = "";
+            textBoxKommentti.Text = "";
+        }
+
+        public void ClearPelaaja()
+        {
+            textBoxTapot.Text = "";
+            textBoxKuolemat.Text = "";
+            textBoxDamage.Text = "";
+            textBoxAse.Text = "";
             textBoxPeliaika.Text = "";
             textBoxKommentti.Text = "";
         }
